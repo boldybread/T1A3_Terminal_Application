@@ -1,10 +1,12 @@
 #!/bin/bash
 
 # check if python installed
-
+[[ "$(python3 -V)" =~ "Python 3" ]] && echo "Python 3 is installed"
 
 
 python3 -m venv .venv
 source .venv/bin/activate
 pip3 install colored
-python3 main.py
+pip3 install fontstyle
+pip install playsound
+# python3 main.py
