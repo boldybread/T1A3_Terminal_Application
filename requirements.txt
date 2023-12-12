@@ -1,0 +1,2 @@
+colored==2.2.3
+fontstyle==1.0.1.2
