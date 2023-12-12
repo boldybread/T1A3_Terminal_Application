@@ -14,6 +14,9 @@ def chapter_1b():
             print("You enter a small storeroom")
             # sleep(4)
             print("You find a pistol, this will be useful! You pocket the gun")
+            print("Gained PISTOL + PISTOL AMMO")
+            pistol = True
+            pistol_ammo = True
             # sleep(4)
             print("You find your driver's license, they must have taken it off you, you remember a bit about yourself")
             # sleep(4)

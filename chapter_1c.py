@@ -32,6 +32,9 @@ def chapter_1c():
             print("You make him turn around and you incapacitate him. No sounds coming from up the stairs, good, no one heard anything.")
             # sleep(4)
             print("You pick up the guards weapon and start to move up the stairs")
+            print("Gained RIFLE + RIFLE AMMO")
+            rifle = True
+            rifle_ammo = True
             chapter_2a()
         else:
             print("I need to make a choice quickly!")
