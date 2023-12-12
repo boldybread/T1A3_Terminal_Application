@@ -22,12 +22,12 @@ def chapter_1b():
             sleep(1)
             print("You find your driver's license, they must have taken it off you, you remember a bit about yourself")
             sleep(1)
-            name = input("remember your name: ")
+            name = input("Remember your name: ").capitalize()
             sleep(1)
-            print("thats right! my name is" + name +" and everybody calls me Malice!")
+            print("thats right! my name is " + name +" and everybody calls me Malice!")
             sleep(1)
             print("Alright time to get out of this place!")
-            pass #chapter_1c
+            chapter_1c()
         elif user_input == "right":
             print("You travel down a long corridor carefully")
             sleep(1)
@@ -44,7 +44,7 @@ def chapter_1b():
                     sleep(1)
                     print("You arrive back at the entrance of your would be jail")
                     chapter_1b()
-                elif user_input == "fight guard":
+                elif user_input2 == "fight guard":
                     print("You stealthily start moving towards the guard")
                     sleep(1)
                     print("But he has reached the end of the corridor and begins to turn")
@@ -99,7 +99,7 @@ def story_intro():
     user_input = ""
     options = ["open"]
     while user_input not in options:
-        print("open your eyes")
+        print("'open' your eyes")
         user_input = input().lower()
         if user_input == "action":
             print("Well done! Here is your Easter Egg '@'\n")
