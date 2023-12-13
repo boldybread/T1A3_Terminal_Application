@@ -1,9 +1,10 @@
 import fontstyle
 from time import sleep
 
+pistol_ammo = False
+lighter = False
 def chapter_1b():
     from chapter_1c import chapter_1c
-    from main import pistol, pistol_ammo
     user_input = ""
     options = ["left", "right"]
     print("You are faced with 2 directions, left towards what looks like a store room or right towards the exit")
@@ -15,14 +16,15 @@ def chapter_1b():
             # sleep(4)
             print("You find a pistol, this will be useful! You pocket the gun")
             print("Gained PISTOL + PISTOL AMMO")
-            pistol = True
+            global pistol_ammo
             pistol_ammo = True
             # sleep(4)
             print("You find your driver's license, they must have taken it off you, you remember a bit about yourself")
             # sleep(4)
-            name = input("Remember your name: ")
+            global fname
+            fname = input("Remember your name: ").capitalize()
             # sleep(4)
-            print("thats right! my name is " + name +" and everybody calls me Malice!")
+            print("thats right! my name is " + fname +" and everybody calls me Malice!")
             # sleep(4)
             user_input3 = ""
             options3 = ["take", "leave"]
@@ -32,6 +34,7 @@ def chapter_1b():
                 user_input3 = input().lower()
                 if user_input3 == "take":
                     print("Gained LIGHTER")
+                    global lighter
                     lighter = True
                     print("Alright time to get out of this place!")
                     chapter_1c()

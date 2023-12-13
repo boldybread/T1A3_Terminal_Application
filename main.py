@@ -47,12 +47,5 @@ def story_intro():
             print("I guess I'll keep my eyes closed a little bit longer\n")
             sleep(2)
 
-lighter = False
-wounded = False
-girl_alive = True
-pistol = False
-pistol_ammo = False
-rifle = False
-rifle_ammo = False
+fname = ""
 story_intro()
-

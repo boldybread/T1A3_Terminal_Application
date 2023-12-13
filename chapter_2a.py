@@ -1,11 +1,14 @@
 import fontstyle
 from time import sleep
 
+from chapter_1b import pistol_ammo
 
+wounded = False
+girl_alive = True
 
 def chapter_2a():
-    from main import girl_alive, pistol_ammo, wounded
     from chapter_3a import chapter_3a
+    from chapter_3c import chapter_3c
     from chapter_3b import leave
     user_input = ""
     options = ["save girl", "wait"]
@@ -32,12 +35,14 @@ def chapter_2a():
                     print("The girl is the first to react, she pulls out a pistol and shoots the guard on the left")
                     # sleep(4)
                     print("The third guard stands and draws on you, but he isn't quick enough, you fire the rest of your pistol rounds and take him down")
+                    print("lost PISTOL AMMO")
+                    global pistol_ammo
                     pistol_ammo = False
                     # sleep(4)
                     print("The girl gives you a relieved smile before returning to her normal confident demeanor, 'took you long enough Mal!'")
                     # sleep(4)
                     print("'Come on, I know where Killjoy is, he owns a club downtown, I'll drive us there'")
-                    chapter_3a()
+                    chapter_3c()
                 elif user_input2 == "rifle":
                     print("You lift up the rifle, and take aim at the guard threatening the girl, and fire.")
                     # sleep(4)
@@ -50,7 +55,7 @@ def chapter_2a():
                     print("The girl gives you a relieved smile before returning to her normal confident demeanor, 'took you long enough Mal!'")
                     # sleep(4)
                     print("'Come on, I know where Killjoy is, he owns a club downtown, I'll drive us there'")
-                    chapter_3a()
+                    chapter_3c()
                 elif user_input2 == "talk":
                     # sleep(4)
                     print("Alright here goes nothing, maybe I am a really smooth talker")
@@ -61,7 +66,8 @@ def chapter_2a():
                     # sleep(4)
                     print("'The boss will love this!' The third guard turns the gun on you, the girl shrieks as the gun fires.")
                     # sleep(4)
-                    print(fontstyle.apply("YOU DIED", 'bold/Italic/red/INVERSE/UNDERLINE/WHITE_BG'))
+                    from chapter_3b import you_died
+                    you_died()
                 else:
                     print("I need to make a choice quickly!")
         elif user_input == "wait":
@@ -70,6 +76,7 @@ def chapter_2a():
             print("The girl pleads with the guard that she is innocent.")
             # sleep(4)
             print("The guard laughs and says he has been waiting for an excuse to do this. Panic in the girls voice before a gunshot, then silence")
+            global girl_alive 
             girl_alive = False
             # sleep(4)
             print("'Go check on Malice! If he has escaped Killjoy will have our heads!'")
@@ -89,7 +96,8 @@ def chapter_2a():
                     # sleep(4)
                     print("The third guard quickly raises his rifle at you and fires")
                     # sleep(4)
-                    print(fontstyle.apply("YOU DIED", 'bold/Italic/red/INVERSE/UNDERLINE/WHITE_BG'))
+                    from chapter_3b import you_died
+                    you_died()
                 elif user_input3 == "rifle":
                     print("'You raise the rifle up and start firing")
                     # sleep(4)
@@ -97,6 +105,7 @@ def chapter_2a():
                     # sleep(4)
                     print("You both start firing, you take him down, but also receive a flesh wound")
                     print("WOUNDED")
+                    global wounded
                     wounded = True
                     # sleep(4)
                     print("I can either 'search' around or I can just 'leave' and forget all this")

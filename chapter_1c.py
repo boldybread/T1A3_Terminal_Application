@@ -2,9 +2,9 @@ import fontstyle
 from time import sleep
 from chapter_2a import chapter_2a
 
+rifle_ammo = False
 
 def chapter_1c():
-    from main import rifle, rifle_ammo
     user_input = ""
     options = ["left", "right"]
     print("You walk down a long corridor, as you turn a corner you see a guard patrolling near the bottom of some stairs, you can 'fire' from your vantage point or try and do this 'stealthily'")
@@ -35,7 +35,7 @@ def chapter_1c():
             # sleep(4)
             print("You pick up the guards weapon and start to move up the stairs")
             print("Gained RIFLE + RIFLE AMMO")
-            rifle = True
+            global rifle_ammo
             rifle_ammo = True
             chapter_2a()
         else:
