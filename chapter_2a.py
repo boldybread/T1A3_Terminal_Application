@@ -1,9 +1,12 @@
-from colored import Fore, Back, Style
 import fontstyle
 from time import sleep
-from chapter_3a import chapter_3a
+
+
 
 def chapter_2a():
+    from main import girl_alive, pistol_ammo, wounded
+    from chapter_3a import chapter_3a
+    from chapter_3b import leave
     user_input = ""
     options = ["save girl", "wait"]
     print("At the top of the stairs is a big open room, there you see 2 guards one on either side of the room, and straight ahead of you is the woman who helped you escape")
@@ -79,44 +82,44 @@ def chapter_2a():
             while user_input3 not in options3:
                 print("'pistol' | 'rifle'")
                 user_input3 = input().lower()
-                    if user_input3 == "pistol":
-                        print("You raise the pistol up and start firing")
-                        # sleep(4)
-                        print("You manage to drop both advancing guards before your pistol empties")
-                        # sleep(4)
-                        print("The third guard quickly raises his rifle at you and fires")
-                        # sleep(4)
-                        print(fontstyle.apply("YOU DIED", 'bold/Italic/red/INVERSE/UNDERLINE/WHITE_BG'))
-                    elif user_input3 == "rifle":
-                        print("'You raise the rifle up and start firing")
-                        # sleep(4)
-                        print("You easily drop both advancing guards and start aiming for the third, who is raising his rifle towards you")
-                        # sleep(4)
-                        print("You both start firing, you take him down, but also receive a flesh wound")
-                        print("INJURED")
-                        injured = True
-                        # sleep(4)
-                        print("I can either 'search' around or I can just 'leave' and forget all this")
-                        user_input4 = ""
-                        options4 = ["search", "leave"]
-                        while user_input4 not in options4:
+                if user_input3 == "pistol":
+                    print("You raise the pistol up and start firing")
+                    # sleep(4)
+                    print("You manage to drop both advancing guards before your pistol empties")
+                    # sleep(4)
+                    print("The third guard quickly raises his rifle at you and fires")
+                    # sleep(4)
+                    print(fontstyle.apply("YOU DIED", 'bold/Italic/red/INVERSE/UNDERLINE/WHITE_BG'))
+                elif user_input3 == "rifle":
+                    print("'You raise the rifle up and start firing")
+                    # sleep(4)
+                    print("You easily drop both advancing guards and start aiming for the third, who is raising his rifle towards you")
+                    # sleep(4)
+                    print("You both start firing, you take him down, but also receive a flesh wound")
+                    print("WOUNDED")
+                    wounded = True
+                    # sleep(4)
+                    print("I can either 'search' around or I can just 'leave' and forget all this")
+                    user_input4 = ""
+                    options4 = ["search", "leave"]
+                    while user_input4 not in options4:
                         print("'search' | 'leave'")
                         user_input4 = input().lower()
-                            if user_input4 == "search":
-                                print("You start looking around for some clue to Killjoy's whereabouts")
-                                # sleep(4)
-                                print("At first it seems hopeless, then you see the VIP cards for a club on the table")
-                                # sleep(4)
-                                print("'Thats right! Killjoy owns that stupid club, Wonderland, he might be there'")
-                                # sleep(4)
-                                print("'Malice in Wonderland, there is a joke in there somewhere' You chuckle to yourself as you head out to find the place")
-                                # sleep(4)
-                                chapter_3a()
-                            elif user_input4 == "leave":
-                                leave()
-                            else:
+                        if user_input4 == "search":
+                            print("You start looking around for some clue to Killjoy's whereabouts")
+                            # sleep(4)
+                            print("At first it seems hopeless, then you see the VIP cards for a club on the table")
+                            # sleep(4)
+                            print("'Thats right! Killjoy owns that stupid club, Wonderland, he might be there'")
+                            # sleep(4)
+                            print("'Malice in Wonderland, there is a joke in there somewhere' You chuckle to yourself as you head out to find the place")
+                            # sleep(4)
+                            chapter_3a()
+                        elif user_input4 == "leave":
+                            leave()
+                        else:
                             print("I need to make a choice quickly!")
-                    else:
+                else:
                     print("I need to make a choice quickly!")
         else:
             print("I need to make a choice quickly!")

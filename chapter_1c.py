@@ -1,9 +1,10 @@
-from colored import Fore, Back, Style
 import fontstyle
 from time import sleep
 from chapter_2a import chapter_2a
 
+
 def chapter_1c():
+    from main import rifle, rifle_ammo
     user_input = ""
     options = ["left", "right"]
     print("You walk down a long corridor, as you turn a corner you see a guard patrolling near the bottom of some stairs, you can 'fire' from your vantage point or try and do this 'stealthily'")
@@ -21,7 +22,8 @@ def chapter_1c():
             # sleep(4)
             print("You start firing, there is only 4 rounds left in your pistol and it isn't enough to take down your assailants who start firing back")
             # sleep(4)
-            print(fontstyle.apply("YOU DIED", 'bold/Italic/red/INVERSE/UNDERLINE/WHITE_BG'))
+            from chapter_3b import you_died
+            you_died()
         elif user_input == "stealth":
             print("You make your way down the corridor towards the guard")
             # sleep(4)

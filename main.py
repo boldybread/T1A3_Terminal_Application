@@ -1,15 +1,12 @@
 from colored import Fore, Back, Style
 import fontstyle
 from time import sleep
-from chapter_1a import chapter_1a
 
 
-
-
-print(f"{Fore.black}{Back.white}Welcome to Malice in Chains a text based adventure. You control the journey by your choices. Look out for text in quotations as this is an optional 'action' that can be chosen by typing in that input. Remember that choices can have consequences. Good luck!{Style.reset}\n")
-sleep(1) # Set to 10 once complete
 
 def story_intro():
+    print(f"{Fore.black}{Back.white}Welcome to Malice in Chains a text based adventure. You control the journey by your choices. Look out for text in quotations as this is an optional 'action' that can be chosen by typing in that input. Remember that choices can have consequences. Good luck!{Style.reset}\n")
+    # sleep(10)
     user_input = ""
     options = ["open"]
     while user_input not in options:
@@ -44,13 +41,14 @@ def story_intro():
             # sleep(4) 
             print(fontstyle.apply("Malice in Chains", 'bold/Italic/red/INVERSE/UNDERLINE/WHITE_BG')) # Big exciting font
             # sleep(4)
+            from chapter_1a import chapter_1a
             chapter_1a()
         else:
             print("I guess I'll keep my eyes closed a little bit longer\n")
             sleep(2)
 
 lighter = False
-injured = False
+wounded = False
 girl_alive = True
 pistol = False
 pistol_ammo = False

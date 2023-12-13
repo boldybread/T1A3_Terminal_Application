@@ -1,7 +1,5 @@
-from colored import Fore, Back, Style
 import fontstyle
 from time import sleep
-from chapter_1b import chapter_1b
 
 def chapter_1a():
     user_input = ""
@@ -22,6 +20,7 @@ def chapter_1a():
             print("The mysterious girl tosses you a key and you hastily start unshackling your cuffs. When you look up, she is already gone.")
             # sleep(4)
             print("Alright, time to make for the exit")
+            from chapter_1b import chapter_1b
             chapter_1b()
         elif user_input == "stay quiet":
             print("The voice is coming closer, I think they're going to find me!")
@@ -35,6 +34,7 @@ def chapter_1a():
             print("The mysterious girl tosses you a key and you hastily start unshackling your cuffs. When you look up, she is already gone.")
             # sleep(4)
             print("Alright, time to make for the exit I guess")
+            from chapter_1b import chapter_1b
             chapter_1b()
         else:
             print("I need to make a choice quickly!")

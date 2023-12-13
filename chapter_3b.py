@@ -1,9 +1,27 @@
-from colored import Fore, Back, Style
 import fontstyle
 from time import sleep
-from chapter_1b import name
+
+def you_died():
+    print(fontstyle.apply("YOU DIED", 'bold/Italic/red/INVERSE/UNDERLINE/WHITE_BG'))
+    # sleep(4)
+    print("Would you like to try again?")
+    start_over = ""
+    opt = ["say nothing", "answer"]
+    while start_over not in opt:
+        print("'yes' | 'no'")
+        start_over = input().lower()
+        if start_over == "yes":
+            print("good luck")
+            #sleep(4)
+            from main import story_intro
+            story_intro()
+        elif start_over == "no":
+            exit()
+        else:
+            print("Don't give up!")
 
 def charge():
+    from main import girl_alive, wounded
     print("You summon all your remaining strength, get up and start charging the bar")
     # sleep(4)
     if wounded == True:
@@ -16,17 +34,19 @@ def charge():
         print("You manage to knock his guns out of his hands, but he throws you off of him")
         if girl_alive == True:
             print("Killjoy stands, but the girl has taken his weapons, you hear a gunshot, and Killjoy drops to the floor, finally defeated.")
-            pass # outro_2()
+            from outro import outro_2
+            outro_2()
         else:
             print("Killjoy stands picking up his weapons, he aims at you and fires.")
             # sleep(4)
-            print(fontstyle.apply("YOU DIED", 'bold/Italic/red/INVERSE/UNDERLINE/WHITE_BG'))
+            you_died()
 
 def girl_saves():
     print("Suddenly the girl appears behind Killjoy and smashes a bottle on his head")
     # sleep(4)
     print("You seize the opportunity and raise the rifle and fire. Killjoy is down for good.")
-    pass # outro_2
+    from outro import outro_2
+    outro_2()
 
 def leave():
     print("You decide to get out of there, you've been shot, you just want to go lie down somewhere")
@@ -37,11 +57,12 @@ def leave():
     # sleep(4)
     print("You wake up to a bang as Killjoy's goons bust through your door")
     # sleep(4)
-    print(fontstyle.apply("YOU DIED", 'bold/Italic/red/INVERSE/UNDERLINE/WHITE_BG'))
+    you_died()
 
 def no_bar():
     print("You exchange shots with each other")
     # sleep(4)
+    from chapter_1b import name
     print(f"Then a silence as both of you stop shooting. 'You still alive there {name}?'")
     # sleep(4)
     user_input2 = ""
@@ -56,23 +77,27 @@ def no_bar():
             # sleep(4)
             print("'Any last words?'")
             # sleep(4)
+            from main import girl_alive
             if girl_alive == True:
                  girl_saves()
             else:
                 user_input3 = ""
                 options3 = ["say nothing", "screw you!"]
-                while user_input not in options3:
-                print("'say nothing' | 'screw you!'")
-                user_input3 = input().lower()
-                if user_input3 == "say nothing":
+                while user_input3 not in options3:
+                    print("'say nothing' | 'screw you!'")
+                    user_input3 = input().lower()
+                    if user_input3 == "say nothing":
                         print("'Figures, no one is ever cocky facing the inevitable.'")
-                    print(fontstyle.apply("YOU DIED", 'bold/Italic/red/INVERSE/UNDERLINE/WHITE_BG'))
-                elif user_input3 == "screw you!":
-                    print("'Yeah I'd probably say the same if the shoe was on the foot. See ya Malice.'")
-                    print(fontstyle.apply("YOU DIED", 'bold/Italic/red/INVERSE/UNDERLINE/WHITE_BG'))
+                        you_died()
+                    elif user_input3 == "screw you!":
+                        print("'Yeah I'd probably say the same if the shoe was on the foot. See ya Malice.'")
+                        you_died()
+                    else:
+                        print("I need to make a choice quickly!")
         elif user_input2 == "answer":
             print("'Yeah I'm still here. How are you doing?'")
             # sleep(4)
+            from main import girl_alive
             if girl_alive == True:
                 print("'So Nikki couldn't bare the thought of you locked away' I'm going to kill her after I kill you just so you know")
                 # sleep (4)
@@ -87,6 +112,7 @@ def no_bar():
                 print("You seize your chance and spring up from cover and fire one round. It hits Killjoy cleanly.")
                 # sleep(4)
                 print("'She is dead, just like you are.'")
-                pass # outro_1
+                from outro import outro_1
+                outro_1()
         else:
             print("I need to make a choice quickly!")

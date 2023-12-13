@@ -1,9 +1,9 @@
-from colored import Fore, Back, Style
 import fontstyle
 from time import sleep
-from chapter_1c import chapter_1c
 
 def chapter_1b():
+    from chapter_1c import chapter_1c
+    from main import pistol, pistol_ammo
     user_input = ""
     options = ["left", "right"]
     print("You are faced with 2 directions, left towards what looks like a store room or right towards the exit")
@@ -68,7 +68,8 @@ def chapter_1b():
                     # sleep(4)
                     print("The guard smirks at your attempted escape and raises a large gun towards you and fires")
                     # sleep(4)
-                    print(fontstyle.apply("YOU DIED", 'bold/Italic/red/INVERSE/UNDERLINE/WHITE_BG'))
+                    from chapter_3b import you_died
+                    you_died()
                 else:
                     print("I need to make a choice quickly!")
         else:
