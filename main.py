@@ -2,40 +2,9 @@ from colored import Fore, Back, Style
 import fontstyle
 from time import sleep
 from chapter_1a import chapter_1a
-from pygame import mixer
 
-# Starting the mixer 
-mixer.init() 
-  
-# Loading the song 
-mixer.music.load("Music.mp3") 
-  
-# Setting the volume 
-mixer.music.set_volume(0.7) 
-  
-# Start playing the song 
-mixer.music.play() 
-  
-# infinite loop 
-while True: 
-      
-    print("Press 'p' to pause, 'r' to resume") 
-    print("Press 'e' to exit the program") 
-    query = input("  ") 
-      
-    if query == 'p': 
-  
-        # Pausing the music 
-        mixer.music.pause()      
-    elif query == 'r': 
-  
-        # Resuming the music 
-        mixer.music.unpause() 
-    elif query == 'e': 
-  
-        # Stop the mixer 
-        mixer.music.stop() 
-        break
+
+
 
 print(f"{Fore.black}{Back.white}Welcome to Malice in Chains a text based adventure. You control the journey by your choices. Look out for text in quotations as this is an optional 'action' that can be chosen by typing in that input. Remember that choices can have consequences. Good luck!{Style.reset}\n")
 sleep(1) # Set to 10 once complete
@@ -80,6 +49,9 @@ def story_intro():
             print("I guess I'll keep my eyes closed a little bit longer\n")
             sleep(2)
 
+lighter = False
+injured = False
+girl_alive = True
 pistol = False
 pistol_ammo = False
 rifle = False

@@ -24,8 +24,25 @@ def chapter_1b():
             # sleep(4)
             print("thats right! my name is " + name +" and everybody calls me Malice!")
             # sleep(4)
-            print("Alright time to get out of this place!")
-            chapter_1c()
+            user_input3 = ""
+            options3 = ["take", "leave"]
+            print("You find a small zippo lighter, could be useful, 'take' it or 'leave' it?")
+            while user_input3 not in options3:
+                print("'take' | 'leave'")
+                user_input3 = input().lower()
+                if user_input3 == "take":
+                    print("Gained LIGHTER")
+                    lighter = True
+                    print("Alright time to get out of this place!")
+                    chapter_1c()
+                elif user_input3 == "leave":
+                    print("You decide its best to keep moving")
+                    # sleep(4)
+                    print("Best to get out of here")
+                    chapter_1c()
+                else:
+                    print("I need to make a choice quickly!")
+                    # sleep(4)
         elif user_input == "right":
             print("You travel down a long corridor carefully")
             # sleep(4)
