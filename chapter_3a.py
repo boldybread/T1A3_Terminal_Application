@@ -1,3 +1,4 @@
+from colored import Fore, Back, Style
 import fontstyle
 from time import sleep
 
@@ -24,7 +25,7 @@ def chapter_3a():
                 print("You move to a new piece of cover and keep firing")
                 # sleep(4)
                 print("You take a few more rounds yourself before the last goon falls")
-                print("INJURED")
+                print(f"{Fore.green}INJURED{Style.reset}")
                 injured = True
                 # sleep(4)
                 print("Killjoy bursts through a door in the back dual pistols in hand and starts firing")

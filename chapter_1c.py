@@ -1,3 +1,4 @@
+from colored import Fore, Back, Style
 import fontstyle
 from time import sleep
 from chapter_2a import chapter_2a
@@ -7,7 +8,7 @@ rifle_ammo = False
 def chapter_1c():
     user_input = ""
     options = ["left", "right"]
-    print("You walk down a long corridor, as you turn a corner you see a guard patrolling near the bottom of some stairs, you can 'fire' from your vantage point or try and do this 'stealthily'")
+    print(f"You walk down a long corridor, as you turn a corner you see a guard patrolling near the bottom of some stairs, you can {Fore.red}fire{Style.reset} from your vantage point or try and do this {Fore.red}stealthily{Style.reset}")
     while user_input not in options:
         print("'fire' | 'stealth'")
         user_input = input().lower()
@@ -34,7 +35,7 @@ def chapter_1c():
             print("You make him turn around and you incapacitate him. No sounds coming from up the stairs, good, no one heard anything.")
             # sleep(4)
             print("You pick up the guards weapon and start to move up the stairs")
-            print("Gained RIFLE + RIFLE AMMO")
+            print(f"{Fore.green}Gained RIFLE + RIFLE AMMO{Style.reset}")
             global rifle_ammo
             rifle_ammo = True
             chapter_2a()

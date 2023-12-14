@@ -1,14 +1,17 @@
 import fontstyle
 from time import sleep
 
+# start_over = ""
+
 def you_died():
     print(fontstyle.apply("YOU DIED", 'bold/Italic/red/INVERSE/UNDERLINE/WHITE_BG'))
     # sleep(4)
     print("Would you like to try again?")
     start_over = ""
-    opt = ["say nothing", "answer"]
+    opt = ["yes", "no"]
     while start_over not in opt:
         print("'yes' | 'no'")
+        # global start_over
         start_over = input().lower()
         if start_over == "yes":
             print("good luck")

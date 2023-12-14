@@ -7,12 +7,12 @@ from pygame import mixer
 
 
 def story_intro():
-    print(f"{Fore.black}{Back.white}Welcome to Malice in Chains a text based adventure. You control the journey by your choices. Look out for text in quotations as this is an optional 'action' that can be chosen by typing in that input. Remember that choices can have consequences. Good luck!{Style.reset}\n")
+    print(f"{Fore.black}{Back.white}Welcome to Malice in Chains a text based adventure. You control the journey by your choices. Look out for any red text as this is an optional {Fore.red}'action'{Fore.black} that can be chosen by typing in that input. Sometimes you won't be prompted to input that action so keep an eye out for red text. Remember that choices can have consequences. Good luck!{Style.reset}\n")
     # sleep(10)
     user_input = ""
     options = ["open"]
     while user_input not in options:
-        print("'open' your eyes")
+        print(f"{Fore.red}open{Style.reset} your eyes")
         user_input = input().lower()
         if user_input == "action":
             print("Well done! Here is your Easter Egg '@'\n")

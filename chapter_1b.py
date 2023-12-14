@@ -1,3 +1,4 @@
+from colored import Fore, Back, Style
 import fontstyle
 from time import sleep
 
@@ -7,7 +8,7 @@ def chapter_1b():
     from chapter_1c import chapter_1c
     user_input = ""
     options = ["left", "right"]
-    print("You are faced with 2 directions, left towards what looks like a store room or right towards the exit")
+    print(f"You are faced with 2 directions, {Fore.red}left{Style.reset} towards what looks like a store room or {Fore.red}'right'{Style.reset} towards the exit")
     while user_input not in options:
         print("'left' | 'right'")
         user_input = input().lower()
@@ -15,7 +16,7 @@ def chapter_1b():
             print("You enter a small storeroom")
             # sleep(4)
             print("You find a pistol, this will be useful! You pocket the gun")
-            print("Gained PISTOL + PISTOL AMMO")
+            print(f"{Fore.green}Gained PISTOL + PISTOL AMMO{Style.reset}")
             global pistol_ammo
             pistol_ammo = True
             # sleep(4)
@@ -28,12 +29,12 @@ def chapter_1b():
             # sleep(4)
             user_input3 = ""
             options3 = ["take", "leave"]
-            print("You find a small zippo lighter, could be useful, 'take' it or 'leave' it?")
+            print(f"You find a small zippo lighter, could be useful, {Fore.red}take{Style.reset} it or {Fore.red}leave{Style.reset} it?")
             while user_input3 not in options3:
                 print("'take' | 'leave'")
                 user_input3 = input().lower()
                 if user_input3 == "take":
-                    print("Gained LIGHTER")
+                    print(f"{Fore.green}Gained LIGHTER{Style.reset}")
                     global lighter
                     lighter = True
                     print("Alright time to get out of this place!")

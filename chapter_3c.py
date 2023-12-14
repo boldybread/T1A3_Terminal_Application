@@ -1,3 +1,4 @@
+from colored import Fore, Back, Style
 import fontstyle
 from time import sleep
 
@@ -13,7 +14,7 @@ def chapter_3c():
         print("Give me the rest of your pistol ammo and I will cover you from upstairs")
         # sleep(4)
         print("You hand over your ammo, and the girl heads off up a flight of stairs")
-        print("lost PISTOL AMMO")
+        print(f"{Fore.green}lost PISTOL AMMO{Style.reset}")
         pistol_ammo = False
         # sleep(4)
         print("With the girl in position you bust through the main entrance and start firing.")
@@ -59,7 +60,7 @@ def chapter_3c():
     else:
         print("'I don't have much ammo left but I can cover you from upstairs'")
         # sleep(4)
-        print("You can 'swap' her pistol for your rifle giving her more ammo to cover you, or trust in your own ability and 'keep' the rifle")
+        print(f"You can {Fore.red}swap{Style.reset} her pistol for your rifle giving her more ammo to cover you, or trust in your own ability and {Fore.red}keep{Style.reset} the rifle")
         user_input = ""
         options = ["swap", "keep"]
         while user_input not in options:
@@ -69,9 +70,9 @@ def chapter_3c():
                 print("'Take this rifle, you can do more with it up there anyway'")
                 # sleep(4)
                 print("'OK if you're sure, thanks!' The girl hands you the pistol and then runs off up a flight of stairs")
-                print("lost RIFLE + RIFLE AMMO")
+                print(f"{Fore.green}lost RIFLE + RIFLE AMMO{Style.reset}")
                 rifle_ammo = False
-                print("gained PISTOL + PISTOL AMMO")
+                print(f"{Fore.green}Gained PISTOL + PISTOL AMMO{Style.reset}")
                 pistol_ammo = True
                 # sleep(4)
                 print("You wait for the girl to start firing, and then use the distraction to move in the main doors and start picking off the goons carefully.")
@@ -84,7 +85,7 @@ def chapter_3c():
                 # sleep(4)
                 print("covering fire forces Killjoy to take cover behind the bar")
                 # sleep(4)
-                print("If I had something to light I could use the alcohol behind the bar. I might have to charge the bar instead.'")
+                print(f"If I had something to {Fore.red}light{Style.reset} I could use the alcohol behind the bar. I might have to {Fore.red}charge{Style.reset} the bar instead.'")
                 # sleep(4)
                 from chapter_1b import lighter
                 from chapter_3b import charge

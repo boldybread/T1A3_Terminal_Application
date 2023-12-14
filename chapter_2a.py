@@ -1,3 +1,4 @@
+from colored import Fore, Back, Style
 import fontstyle
 from time import sleep
 
@@ -11,17 +12,17 @@ def chapter_2a():
     from chapter_3c import chapter_3c
     from chapter_3b import leave
     user_input = ""
-    options = ["save girl", "wait"]
+    options = ["save her", "wait"]
     print("At the top of the stairs is a big open room, there you see 2 guards one on either side of the room, and straight ahead of you is the woman who helped you escape")
     #sleep(4)
-    print("You realise a third guard is facing her holding a gun up to her, you can intervene and save her or wait and see how this plays out")
+    print(f"You realise a third guard is facing her holding a gun up to her, you can intervene and {Fore.red}save her{Style.reset} or {Fore.red}wait{Style.reset} and see how this plays out")
     while user_input not in options:
-        print("'save girl' | 'wait'")
+        print("'save her' | 'wait'")
         user_input = input().lower()
-        if user_input == "save girl":
+        if user_input == "save her":
             print("You decide you owe this girl and you're going to do what you can to ensure she doesn't pay for helping you escape")
             # sleep(4)
-            print("You can use the 'pistol' or 'rifle' or you could always try and 'talk' your way out of this")
+            print(f"You can use the {Fore.red}pistol{Style.reset} or {Fore.red}rifle{Style.reset} or you could always try and {Fore.red}talk{Style.reset} your way out of this")
             user_input2 = ""
             options2 = ["pistol", "rifle", "talk"]
             while user_input2 not in options2:
@@ -35,7 +36,7 @@ def chapter_2a():
                     print("The girl is the first to react, she pulls out a pistol and shoots the guard on the left")
                     # sleep(4)
                     print("The third guard stands and draws on you, but he isn't quick enough, you fire the rest of your pistol rounds and take him down")
-                    print("lost PISTOL AMMO")
+                    print(f"{Fore.green}lost PISTOL AMMO{Style.reset}")
                     global pistol_ammo
                     pistol_ammo = False
                     # sleep(4)
@@ -104,11 +105,11 @@ def chapter_2a():
                     print("You easily drop both advancing guards and start aiming for the third, who is raising his rifle towards you")
                     # sleep(4)
                     print("You both start firing, you take him down, but also receive a flesh wound")
-                    print("WOUNDED")
+                    print(f"{Fore.green}WOUNDED{Style.reset}")
                     global wounded
                     wounded = True
                     # sleep(4)
-                    print("I can either 'search' around or I can just 'leave' and forget all this")
+                    print(f"I can either {Fore.red}search{Style.reset} around or I can just {Fore.red}leave{Style.reset} and forget all this")
                     user_input4 = ""
                     options4 = ["search", "leave"]
                     while user_input4 not in options4:

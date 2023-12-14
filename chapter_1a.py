@@ -1,10 +1,11 @@
+from colored import Fore, Back, Style
 import fontstyle
 from time import sleep
 
 def chapter_1a():
     user_input = ""
     options = ["call out", "stay quiet"]
-    print("Suddenly a voice calls out, 'Malice, are you in here?'")
+    print(f"Suddenly a voice calls out, {Fore.red}'Malice'{Style.reset}, 'are you in here?'")
     while user_input not in options:
         print("'call out' | 'stay quiet'")
         user_input = input().lower()
@@ -36,5 +37,7 @@ def chapter_1a():
             print("Alright, time to make for the exit I guess")
             from chapter_1b import chapter_1b
             chapter_1b()
+        elif user_input == "malice":
+            print("Malice? What kind of name is that?!")
         else:
             print("I need to make a choice quickly!")
