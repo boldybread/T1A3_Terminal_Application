@@ -1,6 +1,8 @@
 from colored import Fore, Back, Style
 import fontstyle
 from time import sleep
+import time, sys
+from pygame import mixer
 
 
 
@@ -46,6 +48,9 @@ def story_intro():
         else:
             print("I guess I'll keep my eyes closed a little bit longer\n")
             sleep(2)
+
+
+
 
 fname = ""
 story_intro()
