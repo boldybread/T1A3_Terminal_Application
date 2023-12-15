@@ -5,6 +5,7 @@ from time import sleep
 injured = False
 
 def chapter_3a():
+    from main import wait_duration
     global injured
     user_input = ""
     print("You arrive at the club, 'Wonderland'")
@@ -17,21 +18,21 @@ def chapter_3a():
             user_input = input().lower()
             if user_input == "guns":
                 print("You check your rifle one last time and settle into the best vantage point you can")
-                sleep(4)
+                sleep(wait_duration)
                 print("You start firing in controlled bursts")
-                sleep(4)
+                sleep(wait_duration)
                 print("The element of surprise helps you take out a few goons before they start firing back")
-                sleep(4)
+                sleep(wait_duration)
                 print("You move to a new piece of cover and keep firing")
-                sleep(4)
+                sleep(wait_duration)
                 print("You take a few more rounds yourself before the last goon falls")
                 print(f"{Fore.green}INJURED{Style.reset}")
                 injured = True
-                sleep(4)
+                sleep(wait_duration)
                 print("Killjoy bursts through a door in the back dual pistols in hand and starts firing")
-                sleep(4)
+                sleep(wait_duration)
                 print("You groan throwing the empty rifle and pull out your pistol")
-                sleep(4)
+                sleep(wait_duration)
                 from chapter_3b import no_bar
                 no_bar()
             elif user_input == "leave":
