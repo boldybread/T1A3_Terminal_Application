@@ -3,39 +3,50 @@ import fontstyle
 from time import sleep
 import random
 
-while True:
+def rock_paper_scissors():
     rps_choice = input(f"Enter {Fore.red}Rock{Style.reset}, {Fore.red}Paper{Style.reset} or {Fore.red}Scissors{Style.reset}: ").lower()
     game_choices = ["rock", "paper", "scissors"]
     nikki_choice = random.choice(game_choices)
 
-    print(f"You chose {rps_choice} and the girl chose {nikki_choice}")
     if rps_choice == nikki_choice:
         print(f"Both of you chose {rps_choice}, its a tie! Lets go again on 3!")
     elif rps_choice == "rock":
+        print(f"You chose {rps_choice} and the girl chose {nikki_choice}")
         if nikki_choice == "paper":
-            print("The girl beat you with paper!")
+            print("she beat you!")
         else:
-            print("You beat her with trusty old rock!")
+            print("You won! Trusty old rock!")
     elif rps_choice == "scissors":
+        print(f"You chose {rps_choice} and the girl chose {nikki_choice}")
         if nikki_choice == "rock":
-            print("The girl beat you with rock!")
+            print("She beat you!")
         else:
-            print("You beat her with scissors!")
+            print("You won!")
     elif rps_choice == "paper":
+        print(f"You chose {rps_choice} and the girl chose {nikki_choice}")
         if nikki_choice == "scissors":
             print("The girl beat you with scissors!")
         else:
             print("You beat her with paper!")
+    else:
+        print("Its a tough choice I know! Maybe trusty old rock?")
 
     play_again = ""
     play_options = ["yes", "no"]
     print("Do you want to play one more game?")
-    while play_again not in options:
+    while play_again not in play_options:
         print("'yes' | 'no'")
         play_again = input().lower()
         if play_again == "yes":
             print("There is always time for one more game") # Could look at adding a value to track if last game was won or not and then comment in code about it
+            sleep(2)
+            rock_paper_scissors()
         elif play_again == "no":
             print("No there isn't much time, we should get a move on!")
+            # Need to direct to new function
+            sleep(2)
+            break
         else:
             print("This is harder to choose than choosing between rock, paper, scissors! But seriously, make a choice!")
+
+rock_paper_scissors()

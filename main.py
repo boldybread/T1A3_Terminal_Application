@@ -1,8 +1,6 @@
 from colored import Fore, Back, Style
 import fontstyle
 from time import sleep
-import time, sys
-from pygame import mixer
 
 
 
