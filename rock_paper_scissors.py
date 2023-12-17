@@ -65,8 +65,8 @@ def rock_paper_scissors():
                 print("'We tied overall, so who is going to see if Killjoy is here?'")
                 sleep(wait_duration)
             print("The girl laughs, 'Thats his car right there' she points to a done up Mustang, 'come on lets go, we've wasted enough time already' she jests")
-            from chapter_3a import chapter_3a
-            chapter_3a()
+            from chapter_3c import chapter_3c
+            chapter_3c()
         else:
             print("This is harder to choose than choosing between rock, paper, scissors! But seriously, make a choice!")
 

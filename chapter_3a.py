@@ -4,7 +4,7 @@ from time import sleep
 
 injured = False
 
-def chapter_3a():
+def chapter_3a(): # 3a is the girl not alive continuation
     from main import wait_duration
     global injured
     user_input = ""

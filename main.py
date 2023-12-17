@@ -1,6 +1,10 @@
 from colored import Fore, Back, Style
 import fontstyle
 from time import sleep
+from computational_stopwatch import Stopwatch
+import math
+
+sw = Stopwatch() # Starts the timer which times completion time
 
 wait_duration = 0 # This is the variable used for most of the pauses between output lines of text. This enabled me to change to 0 for testing, or 4 for the proper game
 
@@ -39,9 +43,8 @@ def story_intro():
             sleep(wait_duration) 
             print("Welcome to...\n")
             sleep(wait_duration) 
-            print(fontstyle.apply("Malice in Chains", 'bold/Italic/red/INVERSE/UNDERLINE/WHITE_BG')) # Big exciting font
+            print(fontstyle.apply("Malice in Chains", 'bold/Italic/red/INVERSE/UNDERLINE/WHITE_BG'))
             sleep(wait_duration)
-            # start_game()
             from chapter_1a import chapter_1a
             chapter_1a()
         else:
@@ -49,20 +52,6 @@ def story_intro():
             sleep(2)
 
 
-
-# def start_game():
-#     user_input = ""
-#     options = ["start", "quit"]
-#     while user_input not in options:
-#         print(f"\ntype {Fore.red}start{Style.reset} to begin or {Fore.red}quit{Style.reset} to end your adventure")
-#         user_input = input().lower()
-#         if user_input == "start":
-#             from chapter_1a import chapter_1a
-#             chapter_1a()
-#         elif user_input == "quit":
-#             exit()
-#         else:
-#             print(f"type {Fore.red}start{Style.reset} or {Fore.red}quit{Style.reset}!")
 
 fname = ""
 story_intro()

@@ -2,7 +2,7 @@ from colored import Fore, Back, Style
 import fontstyle
 from time import sleep
 
-def chapter_3c():
+def chapter_3c(): # 3c is the girl alive continuation
     from main import wait_duration
     global pistol_ammo
     from chapter_2a import pistol_ammo

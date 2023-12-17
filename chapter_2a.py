@@ -17,7 +17,7 @@ def chapter_2a():
     user_input = ""
     options = ["save her", "wait"]
     print("At the top of the stairs is a big open room, there you see 2 guards one on either side of the room, and straight ahead of you is the woman who helped you escape")
-    #sleep(wait_duration)
+    sleep(wait_duration)
     print(f"You realise a third guard is facing her holding a gun up to her, you can intervene and {Fore.red}save her{Style.reset} or {Fore.red}wait{Style.reset} and see how this plays out")
     while user_input not in options:
         print("'save her' | 'wait'")

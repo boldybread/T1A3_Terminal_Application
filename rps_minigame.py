@@ -8,10 +8,9 @@ def rps_minigame():
     global wounded
     from chapter_2a import wounded
     print("Soon you're driving through the neon lit streets towards your confrontation with Killjoy")
-    # sleep(wait_duration)
+    sleep(wait_duration)
     print("The girl's blue Honda races through the streets")
-    # sleep(wait_duration)
-    # from chapt blah import blah
+    sleep(wait_duration)
     if wounded:
         print("You look down at your injury and grimace as your body braces against the girl's hasty driving")
     print("Before long you arrive in front of a giant night club")
@@ -35,7 +34,10 @@ def rps_minigame():
         elif choice == "no":
             print("Is she crazy? There is no time for games!")
             sleep(wait_duration)
-            from chapter_3a import chapter_3a
-            chapter_3a()
+            print("'Stay here, I will just go and check it out,' you say. The girl looks disappointed, 'it was just a joke, I know we don't have time'")
+            sleep(wait_duration)
+            print("Then the girl laughs, 'Thats his car right there' she points to a hotted up Mustang, 'come on lets go, we've wasted enough time already' she jests")
+            from chapter_3c import chapter_3c
+            chapter_3c()
         else:
             ("I need to make a decision!")
