@@ -12,5 +12,6 @@ source .venv/bin/activate
 python3 -m pip install colored
 python3 -m pip install fontstyle
 python3 -m pip install computational-stopwatch
+python3 -m pip install names_generator
 
 python3 main.py

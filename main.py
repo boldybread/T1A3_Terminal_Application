@@ -2,7 +2,6 @@ from colored import Fore, Back, Style
 import fontstyle
 from time import sleep
 from computational_stopwatch import Stopwatch
-import math
 
 sw = Stopwatch() # Starts the timer which times completion time
 
@@ -17,7 +16,7 @@ def story_intro():
         print(f"{Fore.red}open{Style.reset} your eyes")
         user_input = input().lower()
         if user_input == "action":
-            print("Well done! Here is your Easter Egg '@'\n")
+            print("Well done! Here is your Easter Egg {Fore.red}@{Style.reset}\n")
             sleep(wait_duration)
         elif user_input == "@":
             print("Very funny! Please can you start the game already?!\n")
@@ -45,8 +44,8 @@ def story_intro():
             sleep(wait_duration) 
             print(fontstyle.apply("Malice in Chains", 'bold/Italic/red/INVERSE/UNDERLINE/WHITE_BG'))
             sleep(wait_duration)
-            from chapter_1a import chapter_1a
-            chapter_1a()
+            from random_encounter import random_encounter
+            random_encounter()
         else:
             print("I guess I'll keep my eyes closed a little bit longer\n")
             sleep(2)

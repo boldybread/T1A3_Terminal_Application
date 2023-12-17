@@ -6,7 +6,7 @@ def chapter_1a():
     from main import wait_duration
     player_input = ""
     player_options = ["call out", "stay quiet"]
-    print(f"Suddenly a voice calls out, {Fore.red}'Malice'{Style.reset}, 'are you in here?'")
+    print(f"The voice calls out again, {Fore.red}'Malice'{Style.reset}, 'are you in here?'")
     while player_input not in player_options:
         print("'call out' | 'stay quiet'")
         player_input = input().lower()
