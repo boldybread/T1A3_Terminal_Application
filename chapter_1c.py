@@ -22,7 +22,7 @@ def chapter_1c():
             sleep(wait_duration)
             print("You aim the gun towards the stairs in preparation, 3 guards appear and quickly take aim at you")
             sleep(wait_duration)
-            print("You start firing, there is only wait_duration rounds left in your pistol and it isn't enough to take down your assailants who start firing back")
+            print("You start firing, there is only 4 rounds left in your pistol and it isn't enough to take down your assailants who start firing back")
             sleep(wait_duration)
             from chapter_3b import you_died
             you_died()

@@ -1,16 +1,16 @@
 from colored import Fore, Back, Style
 import fontstyle
 from time import sleep
-from chapter_2a import pistol_ammo
 
 def chapter_3c():
     from main import wait_duration
+    global pistol_ammo
+    from chapter_2a import pistol_ammo
     user_input = ""
     print("You arrive at the club, 'Wonderland'")
     print("A popular nightspot in the city, yet the outside now is deserted")
     print("'Malice in Wonderland, got to be a joke in there somewhere.' The girl chuckles.")
     print("You make your way inside, past the foyer you can see at least 5 of Killjoy's goons.")
-    global pistol_ammo
     if pistol_ammo: # This code is wrong somewhere
         print("Give me the rest of your pistol ammo and I will cover you from upstairs")
         sleep(wait_duration)

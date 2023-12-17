@@ -2,7 +2,7 @@ from colored import Fore, Back, Style
 import fontstyle
 from time import sleep
 
-wait_duration = 0
+wait_duration = 0 # This is the variable used for most of the pauses between output lines of text. This enabled me to change to 0 for testing, or 4 for the proper game
 
 def story_intro():
     print(f"{Fore.black}{Back.white}Welcome to Malice in Chains a text based adventure. You control the journey by your choices. Look out for any red text as this is an optional {Fore.red}'action'{Fore.black} that can be chosen by typing in that input. Sometimes you won't be prompted to input that action so keep an eye out for red text. Remember that choices can have consequences. Good luck!{Style.reset}\n")
@@ -41,6 +41,7 @@ def story_intro():
             sleep(wait_duration) 
             print(fontstyle.apply("Malice in Chains", 'bold/Italic/red/INVERSE/UNDERLINE/WHITE_BG')) # Big exciting font
             sleep(wait_duration)
+            # start_game()
             from chapter_1a import chapter_1a
             chapter_1a()
         else:
@@ -49,6 +50,19 @@ def story_intro():
 
 
 
+# def start_game():
+#     user_input = ""
+#     options = ["start", "quit"]
+#     while user_input not in options:
+#         print(f"\ntype {Fore.red}start{Style.reset} to begin or {Fore.red}quit{Style.reset} to end your adventure")
+#         user_input = input().lower()
+#         if user_input == "start":
+#             from chapter_1a import chapter_1a
+#             chapter_1a()
+#         elif user_input == "quit":
+#             exit()
+#         else:
+#             print(f"type {Fore.red}start{Style.reset} or {Fore.red}quit{Style.reset}!")
 
 fname = ""
 story_intro()

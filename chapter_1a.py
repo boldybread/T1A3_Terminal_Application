@@ -4,13 +4,13 @@ from time import sleep
 
 def chapter_1a():
     from main import wait_duration
-    user_input = ""
-    options = ["call out", "stay quiet"]
+    player_input = ""
+    player_options = ["call out", "stay quiet"]
     print(f"Suddenly a voice calls out, {Fore.red}'Malice'{Style.reset}, 'are you in here?'")
-    while user_input not in options:
+    while player_input not in player_options:
         print("'call out' | 'stay quiet'")
-        user_input = input().lower()
-        if user_input == "call out":
+        player_input = input().lower()
+        if player_input == "call out":
             print("Hey I recognise that voice, 'Hey in here! you yell'")
             sleep(wait_duration)
             print("The door swings open, a confident and familiar looking woman stands in the doorway")
@@ -24,7 +24,7 @@ def chapter_1a():
             print("Alright, time to make for the exit")
             from chapter_1b import chapter_1b
             chapter_1b()
-        elif user_input == "stay quiet":
+        elif player_input == "stay quiet":
             print("The voice is coming closer, I think they're going to find me!")
             sleep(wait_duration)
             print("The door swings open quietly revealing a beautiful woman who you feel you have seen before")
@@ -38,7 +38,7 @@ def chapter_1a():
             print("Alright, time to make for the exit I guess")
             from chapter_1b import chapter_1b
             chapter_1b()
-        elif user_input == "malice":
+        elif player_input == "malice":
             print("Malice? What kind of name is that?!")
         else:
             print("I need to make a choice quickly!")

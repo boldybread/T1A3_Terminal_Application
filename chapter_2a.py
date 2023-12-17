@@ -2,7 +2,6 @@ from colored import Fore, Back, Style
 import fontstyle
 from time import sleep
 
-from chapter_1b import pistol_ammo
 
 wounded = False
 girl_alive = True
@@ -11,7 +10,10 @@ def chapter_2a():
     from main import wait_duration
     from chapter_3a import chapter_3a
     from chapter_3c import chapter_3c
+    from rps_minigame import rps_minigame
     from chapter_3b import leave
+    global pistol_ammo
+    from chapter_1b import pistol_ammo
     user_input = ""
     options = ["save her", "wait"]
     print("At the top of the stairs is a big open room, there you see 2 guards one on either side of the room, and straight ahead of you is the woman who helped you escape")
@@ -38,13 +40,12 @@ def chapter_2a():
                     sleep(wait_duration)
                     print("The third guard stands and draws on you, but he isn't quick enough, you fire the rest of your pistol rounds and take him down")
                     print(f"{Fore.green}lost PISTOL AMMO{Style.reset}")
-                    global pistol_ammo
                     pistol_ammo = False
                     sleep(wait_duration)
                     print("The girl gives you a relieved smile before returning to her normal confident demeanor, 'took you long enough Mal!'")
                     sleep(wait_duration)
                     print("'Come on, I know where Killjoy is, he owns a club downtown, I'll drive us there'")
-                    chapter_3c()
+                    rps_minigame()
                 elif user_input2 == "rifle":
                     print("You lift up the rifle, and take aim at the guard threatening the girl, and fire.")
                     sleep(wait_duration)
@@ -57,7 +58,7 @@ def chapter_2a():
                     print("The girl gives you a relieved smile before returning to her normal confident demeanor, 'took you long enough Mal!'")
                     sleep(wait_duration)
                     print("'Come on, I know where Killjoy is, he owns a club downtown, I'll drive us there'")
-                    chapter_3c()
+                    rps_minigame()
                 elif user_input2 == "talk":
                     sleep(wait_duration)
                     print("Alright here goes nothing, maybe I am a really smooth talker")
