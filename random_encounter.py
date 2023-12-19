@@ -10,6 +10,7 @@ random_name = names.get_first_name(gender='male')
 random_number = random.randint(1, 100)
 age = random.randint(60,110) # random number between 60 and 110
 age_minus_1 = age - 1
+guesses = 10
 
 def guess_correctly():
     from main import wait_duration
@@ -51,11 +52,11 @@ def random_encounter():
 
 def number_guess_game():
     from main import wait_duration
-    guesses = 10
+    global guesses
     while True:
         if guesses >= 1:
             try:
-                number_guess = input("Guess a number between 1 and 100: ")
+                number_guess = int(input("Guess a number between 1 and 100: "))
                 if number_guess < random_number:
                     guesses -= 1
                     print(f"My number is higher, you have {guesses} guesses left!")
@@ -67,9 +68,10 @@ def number_guess_game():
                     guess_correctly()
                 else:
                     print(f"Enter a number! You have {guesses} guesses left!")
-             except Exception:
+            except ValueError:
                 print("ValueError - Input needs to be a number!!")
                 continue
+
         else:
             print(f"Ah you were so close but you've run out of guesses! My number was {random_number}")
             sleep(wait_duration)
