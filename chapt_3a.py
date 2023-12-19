@@ -33,10 +33,10 @@ def chapter_3a(): # 3a is the girl not alive continuation
                 sleep(wait_duration)
                 print("You groan throwing the empty rifle and pull out your pistol")
                 sleep(wait_duration)
-                from chapter_3b import no_bar
+                from chapt_3b import no_bar
                 no_bar()
             elif user_input == "leave":
-                from chapter_3b import leave
+                from chapt_3b import leave
                 leave()
             else:
                 print("I need to make a choice quickly!")

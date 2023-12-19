@@ -6,7 +6,7 @@ import random
 def rps_minigame():
     from main import wait_duration
     global wounded
-    from chapter_2a import wounded
+    from chapt_2a import wounded
     print("Soon you're driving through the neon lit streets towards your confrontation with Killjoy")
     sleep(wait_duration)
     print("The girl's blue Honda races through the streets")
@@ -37,7 +37,7 @@ def rps_minigame():
             print("'Stay here, I will just go and check it out,' you say. The girl looks disappointed, 'it was just a joke, I know we don't have time'")
             sleep(wait_duration)
             print("Then the girl laughs, 'Thats his car right there' she points to a hotted up Mustang, 'come on lets go, we've wasted enough time already' she jests")
-            from chapter_3c import chapter_3c
+            from chapt_3c import chapter_3c
             chapter_3c()
         else:
             ("I need to make a decision!")

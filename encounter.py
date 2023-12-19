@@ -14,7 +14,6 @@ guesses = 10
 
 def guess_correctly():
     from main import wait_duration
-    sleep(wait_duration)
     print("'Alright I've played your game, now tell me where are we!?'")
     sleep(wait_duration)
     print(f"Before {random_name} can answer another voice breaks your concentration, a girls voice.")
@@ -23,7 +22,7 @@ def guess_correctly():
     sleep(wait_duration)
     print((f"You turn back to {random_name} but there is no one there! No chains, no cards, nothing. Is your mind playing tricks on you?"))
     sleep(wait_duration)
-    from chapter_1a import chapter_1a
+    from chapt_1a import chapter_1a
     chapter_1a()
 
 
@@ -60,11 +59,14 @@ def number_guess_game():
                 if number_guess < random_number:
                     guesses -= 1
                     print(f"My number is higher, you have {guesses} guesses left!")
+                    sleep(wait_duration)
                 elif number_guess > random_number:
                     guesses -= 1
                     print(f"My number is lower, you have {guesses} guesses left!")
+                    sleep(wait_duration)
                 elif number_guess == random_number:
                     print(f"Yes thats it! You guessed that my number was {random_number} and you still had {guesses} guesses left!")
+                    sleep(wait_duration)
                     guess_correctly()
                 else:
                     print(f"Enter a number! You have {guesses} guesses left!")
@@ -79,7 +81,6 @@ def number_guess_game():
             sleep(wait_duration)
             print(f"You turn back to {random_name} but he isn't there. There are no chains, no cards, nothing there at all. Is your mind playing tricks on you?")
             sleep(wait_duration)
-            from chapter_1a import chapter_1a
+            from chapt_1a import chapter_1a
             chapter_1a()
 
-# random_encounter()

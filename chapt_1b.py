@@ -6,7 +6,7 @@ pistol_ammo = False
 lighter = False
 def chapter_1b():
     from main import wait_duration
-    from chapter_1c import chapter_1c
+    from chapt_1c import chapter_1c
     user_input = ""
     options = ["left", "right"]
     print(f"You are faced with 2 directions, {Fore.red}left{Style.reset} towards what looks like a store room or {Fore.red}'right'{Style.reset} towards the exit")
@@ -73,7 +73,7 @@ def chapter_1b():
                     sleep(wait_duration)
                     print("The guard smirks at your attempted escape and raises a large gun towards you and fires")
                     sleep(wait_duration)
-                    from chapter_3b import you_died
+                    from chapt_3b import you_died
                     you_died()
                 else:
                     print("I need to make a choice quickly!")

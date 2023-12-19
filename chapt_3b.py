@@ -17,8 +17,8 @@ def you_died():
         if start_over == "yes":
             print("good luck")
             sleep(wait_duration)
-            from main import story_intro
-            story_intro()
+            from main import prologue
+            prologue()
         elif start_over == "no":
             exit()
         else:
@@ -28,8 +28,8 @@ def charge():
     print("You summon all your remaining strength, get up and start charging the bar")
     sleep(wait_duration)
     global wounded
-    from chapter_2a import wounded
-    from chapter_3a import injured
+    from chapt_2a import wounded
+    from chapt_3a import injured
     if wounded or injured == True:
         print("Killjoy is taken by surprise with your brash move but quickly overpowers you in your weakened condition. He throws you down and aims his gun at you.")
         sleep(wait_duration)
@@ -39,7 +39,7 @@ def charge():
         sleep(wait_duration)
         print("You manage to knock his guns out of his hands, but he throws you off of him")
         global girl_alive
-        from chapter_2a import girl_alive
+        from chapt_2a import girl_alive
         if girl_alive == True:
             print("Killjoy stands, but the girl has taken his weapons, you hear a gunshot, and Killjoy drops to the floor, finally defeated.")
             from outro import outro_2
@@ -70,7 +70,7 @@ def leave():
 def no_bar():
     print("You exchange shots with each other")
     sleep(wait_duration)
-    from chapter_1b import fname
+    from chapt_1b import fname
     print(f"Then a silence as both of you stop shooting. 'You still alive there {fname}?'")
     sleep(wait_duration)
     user_input2 = ""
@@ -86,7 +86,7 @@ def no_bar():
             sleep(wait_duration)
             print("'Any last words?'")
             sleep(wait_duration)
-            from chapter_2a import girl_alive
+            from chapt_2a import girl_alive
             if girl_alive == True:
                 girl_saves()
             else:
@@ -106,7 +106,7 @@ def no_bar():
         elif user_input2 == "answer":
             print("'Yeah I'm still here. How are you doing?'")
             sleep(wait_duration)
-            from chapter_2a import girl_alive
+            from chapt_2a import girl_alive
             if girl_alive == True:
                 print("'So Nikki couldn't bear the thought of you locked away' I'm going to kill her after I kill you just so you know")
                 sleep (wait_duration)

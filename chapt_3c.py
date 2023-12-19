@@ -5,7 +5,7 @@ from time import sleep
 def chapter_3c(): # 3c is the girl alive continuation
     from main import wait_duration
     global pistol_ammo
-    from chapter_2a import pistol_ammo
+    from chapt_2a import pistol_ammo
     user_input = ""
     print("You arrive at the club, 'Wonderland'")
     print("A popular nightspot in the city, yet the outside now is deserted")
@@ -31,7 +31,7 @@ def chapter_3c(): # 3c is the girl alive continuation
         print("If I had something to light I could use the alcohol behind the bar. I might have to charge the bar instead.'")
         sleep(wait_duration)
         global lighter
-        from chapter_1b import lighter
+        from chapt_1b import lighter
         if lighter == True:
             user_input = ""
             options = ["lighter", "charge"]
@@ -52,11 +52,11 @@ def chapter_3c(): # 3c is the girl alive continuation
                     outro_2()
                 elif user_input == "charge":
                     print("You decide to charge the bar in an all or nothing play")
-                    from chapter_3b import charge
+                    from chapt_3b import charge
                     charge()
         else:
             print("You decide to charge the bar in an all or nothing play")
-            from chapter_3b import charge
+            from chapt_3b import charge
             charge()
     else:
         print("'I don't have much ammo left but I can cover you from upstairs'")
@@ -88,8 +88,8 @@ def chapter_3c(): # 3c is the girl alive continuation
                 sleep(wait_duration)
                 print(f"If I had something to {Fore.red}light{Style.reset} I could use the alcohol behind the bar. I might have to {Fore.red}charge{Style.reset} the bar instead.'")
                 sleep(wait_duration)
-                from chapter_1b import lighter
-                from chapter_3b import charge
+                from chapt_1b import lighter
+                from chapt_3b import charge
                 if lighter == True:
                     user_input2 = ""
                     options2 = ["lighter", "charge"]
@@ -130,7 +130,7 @@ def chapter_3c(): # 3c is the girl alive continuation
                 print("Suddenly Killjoy bursts through a door in the back, dual pistols in hand and starts firing at the both of you.")
                 sleep(wait_duration)
                 print("You groan and jump into cover, half a clip left of rifle ammo, it looks like the girl is out as well")
-                from chapter_3b import no_bar
+                from chapt_3b import no_bar
                 no_bar()
             else:
                 print("I need to make a choice quickly!")

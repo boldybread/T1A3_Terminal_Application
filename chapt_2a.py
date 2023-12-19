@@ -8,12 +8,12 @@ girl_alive = True
 
 def chapter_2a():
     from main import wait_duration
-    from chapter_3a import chapter_3a
-    from chapter_3c import chapter_3c
+    from chapt_3a import chapter_3a
+    from chapt_3c import chapter_3c
     from rps_minigame import rps_minigame
-    from chapter_3b import leave
+    from chapt_3b import leave
     global pistol_ammo
-    from chapter_1b import pistol_ammo
+    from chapt_1b import pistol_ammo
     user_input = ""
     options = ["save her", "wait"]
     print("At the top of the stairs is a big open room, there you see 2 guards one on either side of the room, and straight ahead of you is the woman who helped you escape")
@@ -69,7 +69,7 @@ def chapter_2a():
                     sleep(wait_duration)
                     print("'The boss will love this!' The third guard turns the gun on you, the girl shrieks as the gun fires.")
                     sleep(wait_duration)
-                    from chapter_3b import you_died
+                    from chapt_3b import you_died
                     you_died()
                 else:
                     print("I need to make a choice quickly!")
@@ -99,7 +99,7 @@ def chapter_2a():
                     sleep(wait_duration)
                     print("The third guard quickly raises his rifle at you and fires")
                     sleep(wait_duration)
-                    from chapter_3b import you_died
+                    from chapt_3b import you_died
                     you_died()
                 elif user_input3 == "rifle":
                     print("'You raise the rifle up and start firing")
