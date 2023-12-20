@@ -29,13 +29,49 @@ Malice in Chains (MiC) is a text based choose your own adventure game set in a c
 
 - The bulk of the game will have an input text feature to make choices which continues the story in the form of print output. Depending on choices made by the user determines which path the story follows. I have done this by utilising different functions for different arcs of the story. Certain choices call upon different functions, some loop back into each other, other functions completely diverge off to a separate conclusion. Most of these functions utilised while loops with if user_input this, elif user_input that, to drive the story, and else to catch the errors if text other than what was expected was entered by the user.
 
-- I added a compulsory encounter near the start of the game that creates a random Non Playable Character with random attributes who plays a simple mini game of guess the number based on a random number. This adds to the replayability of the game by ensuring every playthrough is different. For this mini game I used a try except block to test for value errors which could catch any non integers inputed.
+- I added a compulsory encounter (random_encounter() within encounter.py) near the start of the game that creates a random Non Playable Character (NPC) with random attributes who plays a simple minigame of guess the number based on a randomly generated number. This adds to the replayability of the game by ensuring every playthrough is different. For this minigame I used a try block to test for value errors which could be caught with an exception if any non integers inputed. I was able to implement this in a way that the game would still continue in the event of a value error without disruption.
 
-- I added various variables such as wounded and lighter which represent player condition or obtainable items. These are all bool values which would potentially force the story in a certain direction dependent on whether they were True or False at a particular time. Some of these were simple flavor text, where some would be the difference between winning or losing the game in certain story arcs.
+- I added various 'condition' variables such as wounded and ammo which represent the player's condition or obtainable items which had the potential to be picked up by the player depending on certain choices. These are all bool values which would potentially force the story in a certain direction dependent on whether they were True or False at a particular time. Some of these were simple flavour text not providing too extreme a diversion, where some would be the difference between winning or losing the game in certain story arcs. This made the choices in the game more significant for the player.
 
 ### Implementation Plan
 
-Images from Trello
+I used Trello to create my project management document.
+I kept my implementation plan simple with 4 lists:
+
+- 'Project Resources' list that contained an overview of the project plan and description of my labels that I would use.
+- 'To do' list for tasks to be started
+- 'Pending' list for tasks in progress
+- 'Done' for completed tasks
+
+![Project Management Overview](images\Project_Management.png)
+
+I used the labels to help illustrate at a glance where I was up to and what was a priority or if I was stuck on a task because of a bug.
+
+![Labels](images\labels.png)
+
+I created a task to map out the story and the different arcs, this was vital as I needed to know the direction I was going, and I only had two weeks so I didn't want to be bogged down creating a really elaborate convoluted story. This task mapped out what chapters I wanted to have in the story and what they would contain as well as where I was going to place the two minigames.
+
+![Create and organise the Story and various arcs](images\Create_story.jpg)
+
+I created a task to create the intro feature which described in detail the function system I was going to use to make my game playable by calling a new function (based on player choices and input) to direct the story down a certain path. Once this was created most of the rest of the story involved similar setup for their various chapters.
+
+![Intro Feature](images\Intro_Feature.png)
+
+The random encounter was created as a compulsory minigame introducing a bunch of random elements designed to increase replayability. Player meets an NPC with randomly generated stats and plays a game of guess the number with the NPC.
+
+![Creating Random Encounter story arc](images\Create_Random_Encounter.jpg)
+
+Rock, Paper, Scissors was my second minigame I created that was optional again offering a break from the standard game process allowing the player to do something a bt different.
+
+![Creating Rock, Peper, Scissors minigame](images\Create_RPS.jpg)
+
+I created multiple bash scripts designed to setup the venv, check for python 3, install all required packages and then run the game. This is explained in more detail below in the Help Documentation.
+
+![Creating bash scripts to setup and run game](images\Create_bash_scripts.jpg)
+
+I made a task to create various bool variables that would reflect player conditions or obtainable items. These were key to the narrative as they would drive certain conclusions or offer additional options based on whether the player made certain choices earlier in the story to receive these afflictions or bonuses.
+
+![Creating Player Conditions & Obtainable Items](images\Add_player_conditions.jpg)
 
 ### Help Documentation
 
