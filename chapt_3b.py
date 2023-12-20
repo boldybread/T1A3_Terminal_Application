@@ -2,7 +2,7 @@ import fontstyle
 from time import sleep
 from main import wait_duration
 
-# start_over = ""
+# This file contains the various game over functions either as a player died or Killjoy has died and game is complete 
 
 def you_died():
     print(fontstyle.apply("YOU DIED", 'bold/Italic/red/INVERSE/UNDERLINE/WHITE_BG'))
@@ -30,7 +30,7 @@ def charge():
     global wounded
     from chapt_2a import wounded
     from chapt_3a import injured
-    if wounded or injured == True:
+    if wounded or injured:
         print("Killjoy is taken by surprise with your brash move but quickly overpowers you in your weakened condition. He throws you down and aims his gun at you.")
         sleep(wait_duration)
         you_died()
@@ -38,10 +38,12 @@ def charge():
         print("Killjoy is taken by surprise with your brash move, you both wrestle on the ground of the bar.")
         sleep(wait_duration)
         print("You manage to knock his guns out of his hands, but he throws you off of him")
+        sleep(wait_duration)
         global girl_alive
         from chapt_2a import girl_alive
-        if girl_alive == True:
+        if girl_alive:
             print("Killjoy stands, but the girl has taken his weapons, you hear a gunshot, and Killjoy drops to the floor, finally defeated.")
+            sleep(wait_duration)
             from outro import outro_2
             outro_2()
         else:
@@ -53,6 +55,7 @@ def girl_saves():
     print("Suddenly the girl appears behind Killjoy and smashes a bottle on his head")
     sleep(wait_duration)
     print("You seize the opportunity and raise the rifle and fire. Killjoy is down for good.")
+    sleep(wait_duration)
     from outro import outro_2
     outro_2()
 
@@ -87,7 +90,7 @@ def no_bar():
             print("'Any last words?'")
             sleep(wait_duration)
             from chapt_2a import girl_alive
-            if girl_alive == True:
+            if girl_alive:
                 girl_saves()
             else:
                 user_input3 = ""
@@ -97,9 +100,11 @@ def no_bar():
                     user_input3 = input().lower()
                     if user_input3 == "say nothing":
                         print("'Figures, no one is ever cocky facing the inevitable.'")
+                        sleep(wait_duration)
                         you_died()
                     elif user_input3 == "screw you!":
                         print("'Yeah I'd probably say the same if the shoe was on the foot. See ya Malice.'")
+                        sleep(wait_duration)
                         you_died()
                     else:
                         print("I need to make a choice quickly!")
@@ -107,7 +112,7 @@ def no_bar():
             print("'Yeah I'm still here. How are you doing?'")
             sleep(wait_duration)
             from chapt_2a import girl_alive
-            if girl_alive == True:
+            if girl_alive:
                 print("'So Nikki couldn't bear the thought of you locked away' I'm going to kill her after I kill you just so you know")
                 sleep (wait_duration)
                 girl_saves()

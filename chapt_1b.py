@@ -17,6 +17,7 @@ def chapter_1b():
             print("You enter a small storeroom")
             sleep(wait_duration)
             print("You find a pistol, this will be useful! You pocket the gun")
+            sleep(wait_duration)
             print(f"{Fore.green}Gained PISTOL + PISTOL AMMO{Style.reset}")
             global pistol_ammo
             pistol_ammo = True
@@ -44,6 +45,7 @@ def chapter_1b():
                     print("You decide its best to keep moving")
                     sleep(wait_duration)
                     print("Best to get out of here")
+                    sleep(wait_duration)
                     chapter_1c()
                 else:
                     print("I need to make a choice quickly!")
@@ -63,6 +65,7 @@ def chapter_1b():
                     print("You quietly slink back the way you came")
                     sleep(wait_duration)
                     print("You arrive back at the entrance of your would be jail")
+                    sleep(wait_duration)
                     chapter_1b()
                 elif user_input2 == "fight guard":
                     print("You stealthily start moving towards the guard")

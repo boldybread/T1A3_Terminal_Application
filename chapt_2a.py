@@ -39,6 +39,7 @@ def chapter_2a():
                     print("The girl is the first to react, she pulls out a pistol and shoots the guard on the left")
                     sleep(wait_duration)
                     print("The third guard stands and draws on you, but he isn't quick enough, you fire the rest of your pistol rounds and take him down")
+                    sleep(wait_duration)
                     print(f"{Fore.green}lost PISTOL AMMO{Style.reset}")
                     pistol_ammo = False
                     sleep(wait_duration)
@@ -58,6 +59,7 @@ def chapter_2a():
                     print("The girl gives you a relieved smile before returning to her normal confident demeanor, 'took you long enough Mal!'")
                     sleep(wait_duration)
                     print("'Come on, I know where Killjoy is, he owns a club downtown, I'll drive us there'")
+                    sleep(wait_duration)
                     rps_minigame()
                 elif user_input2 == "talk":
                     sleep(wait_duration)
@@ -107,6 +109,7 @@ def chapter_2a():
                     print("You easily drop both advancing guards and start aiming for the third, who is raising his rifle towards you")
                     sleep(wait_duration)
                     print("You both start firing, you take him down, but also receive a flesh wound")
+                    sleep(wait_duration)
                     print(f"{Fore.green}WOUNDED{Style.reset}")
                     global wounded
                     wounded = True

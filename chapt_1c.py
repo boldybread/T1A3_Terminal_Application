@@ -37,6 +37,7 @@ def chapter_1c():
             sleep(wait_duration)
             print("You pick up the guards weapon and start to move up the stairs")
             print(f"{Fore.green}Gained RIFLE + RIFLE AMMO{Style.reset}")
+            sleep(wait_duration)
             global rifle_ammo
             rifle_ammo = True
             chapter_2a()

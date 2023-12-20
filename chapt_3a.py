@@ -4,7 +4,7 @@ from time import sleep
 
 injured = False
 
-def chapter_3a(): # 3a is the girl not alive continuation
+def chapter_3a(): # 3a is the girl not alive final showdown continuation (3c is girl alive)
     from main import wait_duration
     global injured
     user_input = ""
@@ -26,6 +26,7 @@ def chapter_3a(): # 3a is the girl not alive continuation
                 print("You move to a new piece of cover and keep firing")
                 sleep(wait_duration)
                 print("You take a few more rounds yourself before the last goon falls")
+                sleep(wait_duration)
                 print(f"{Fore.green}INJURED{Style.reset}")
                 injured = True
                 sleep(wait_duration)

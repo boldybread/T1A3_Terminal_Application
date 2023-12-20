@@ -3,6 +3,8 @@ import fontstyle
 from time import sleep
 import random
 
+rps_wait_duration = 1
+
 def rock_paper_scissors():
     print("'sure we've got time for a quick game I guess!'")
     rps_choice = input(f"Enter {Fore.red}Rock{Style.reset}, {Fore.red}Paper{Style.reset} or {Fore.red}Scissors{Style.reset}: ").lower()
@@ -13,29 +15,39 @@ def rock_paper_scissors():
 
     if rps_choice == nikki_choice:
         print(f"Both of you chose {rps_choice}, its a tie! Lets go again on 3!")
+        sleep(rps_wait_duration)
     elif rps_choice == "rock":
         print(f"You chose {rps_choice} and the girl chose {nikki_choice}")
+        sleep(rps_wait_duration)
         if nikki_choice == "paper":
             print("she beat you! 'Men always seem to go for rock!' she chuckles")
+            sleep(rps_wait_duration)
             nikki_wins += 1
         else:
             print("You won! Trusty old rock!")
+            sleep(rps_wait_duration)
             player_wins += 1
     elif rps_choice == "scissors":
         print(f"You chose {rps_choice} and the girl chose {nikki_choice}")
+        sleep(rps_wait_duration)
         if nikki_choice == "rock":
+            sleep(rps_wait_duration)
             print("She beat you!")
             nikki_wins += 1
         else:
             print("You won! 'Shoot, I thought you'd be predictable and go rock!' She says.")
+            sleep(rps_wait_duration)
             player_wins += 1
     elif rps_choice == "paper":
         print(f"You chose {rps_choice} and the girl chose {nikki_choice}")
+        sleep(rps_wait_duration)
         if nikki_choice == "scissors":
             print("The girl beat you with scissors!")
+            sleep(rps_wait_duration)
             nikki_wins += 1
         else:
             print("You beat her with paper!")
+            sleep(rps_wait_duration)
             player_wins += 1
     else:
         print("Its a tough choice I know! Maybe trusty old rock?")

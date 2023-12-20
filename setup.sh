@@ -17,5 +17,6 @@ source .venv/bin/activate && echo "virtual environment is activated"
 # python3 -m pip install fontstyle
 # python3 -m pip install computational-stopwatch
 # python3 -m pip install names
+# python3 -m pip install pygame
 
 python3 -m pip install -r requirements.txt

@@ -22,6 +22,7 @@ def chapter_1a():
             print("The mysterious girl tosses you a key and you hastily start unshackling your cuffs. When you look up, she is already gone.")
             sleep(wait_duration)
             print("Alright, time to make for the exit")
+            sleep(wait_duration)
             from chapt_1b import chapter_1b
             chapter_1b()
         elif player_input == "stay quiet":
@@ -36,6 +37,7 @@ def chapter_1a():
             print("The mysterious girl tosses you a key and you hastily start unshackling your cuffs. When you look up, she is already gone.")
             sleep(wait_duration)
             print("Alright, time to make for the exit I guess")
+            sleep(wait_duration)
             from chapt_1b import chapter_1b
             chapter_1b()
         elif player_input == "malice":
