@@ -76,7 +76,7 @@ def chapter_1b():
                     sleep(wait_duration)
                     print("The guard smirks at your attempted escape and raises a large gun towards you and fires")
                     sleep(wait_duration)
-                    from chapt_3b import you_died
+                    from consequences import you_died
                     you_died()
                 else:
                     print("I need to make a choice quickly!")

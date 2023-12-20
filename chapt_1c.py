@@ -24,7 +24,7 @@ def chapter_1c():
             sleep(wait_duration)
             print("You start firing, there is only 4 rounds left in your pistol and it isn't enough to take down your assailants who start firing back")
             sleep(wait_duration)
-            from chapt_3b import you_died
+            from consequences import you_died
             you_died()
         elif user_input == "stealth":
             print("You make your way down the corridor towards the guard")

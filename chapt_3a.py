@@ -34,10 +34,10 @@ def chapter_3a(): # 3a is the girl not alive final showdown continuation (3c is 
                 sleep(wait_duration)
                 print("You groan throwing the empty rifle and pull out your pistol")
                 sleep(wait_duration)
-                from chapt_3b import no_bar
+                from consequences import no_bar
                 no_bar()
             elif user_input == "leave":
-                from chapt_3b import leave
+                from consequences import leave
                 leave()
             else:
                 print("I need to make a choice quickly!")

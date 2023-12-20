@@ -1,12 +1,10 @@
 #!/bin/bash
 
-# # Check for venv and create if needed
+# # Check venv and create if needed
 python3 -m venv .venv && echo "virtual environment is created"
-
 
 # activate venv
 source .venv/bin/activate && echo "virtual environment is activated"
-
 
 # check if python installed
 [[ "$(python3 -V)" =~ "Python 3" ]] && echo "Python 3 is already installed"

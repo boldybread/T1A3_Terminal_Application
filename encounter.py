@@ -16,7 +16,7 @@ def guess_correctly():
     from main import wait_duration
     print("'Alright I've played your game, now tell me where are we!?'")
     sleep(wait_duration)
-    print(f"Before {random_name} can answer another voice breaks your concentration, a girls voice.")
+    print(f"Before {random_name} can answer another voice breaks your concentration, a girl's voice.")
     sleep(wait_duration)
     print("You look towards the solitary door of your makeshift cell in anticipation")
     sleep(wait_duration)
@@ -77,7 +77,7 @@ def number_guess_game():
         else:
             print(f"Ah you were so close but you've run out of guesses! My number was {random_number}")
             sleep(wait_duration)
-            print("Another voice breaks your concentration, a girls voice.")
+            print("Another voice breaks your concentration, a girl's voice.")
             sleep(wait_duration)
             print(f"You turn back to {random_name} but he isn't there. There are no chains, no cards, nothing there at all. Is your mind playing tricks on you?")
             sleep(wait_duration)
