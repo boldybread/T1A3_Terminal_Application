@@ -86,7 +86,7 @@ Malice in Chains (MiC) needs to be run on Python 3 and requires multiple externa
 
 #### setup.sh
 
-setup.sh should be run first. Run this script using the command ```./setup.sh```. This will first check for Python 3 on user's device. It will then run venv_create to create a virtual enviroment if it doesnt exist and then activate it. It will then run packages.sh which installs all required packages required to run MiC based off the requirements.txt file within the activated virtual enviroment. After this setup is complete and run.sh can be run to launch the game.
+setup.sh should be run first. Run this script using the command ```source ./setup.sh```. This will first check for Python 3 on user's device. It will then run venv_create to create a virtual enviroment if it doesnt exist and then activate it. It will then run packages.sh which installs all required packages required to run MiC based off the requirements.txt file within the activated virtual enviroment. After this setup is complete and run.sh can be run to launch the game.
 
 #### venv_create.sh
 
