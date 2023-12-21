@@ -8,14 +8,11 @@ Malice in Chains (MiC) is a text based choose your own adventure game set in a c
 
 ### Referenced Sources
 
-- [PyPi Pygame - Used to download Pygame library and learn its functionality](https://pypi.org/project/pygame/)
 - [PyPi Colored - Used to download Colored library and learn its functionality](https://pypi.org/project/colored/)
 - [PyPi Computational-Stopwatch - Used to download Computational-Stopwatch library and learn its functionality](https://pypi.org/project/computational-stopwatch/)
 - [PyPi Fontstyle - Used to download Fontstyle library and learn its functionality](https://pypi.org/project/fontstyle/)
 - [PyPi name - Used to download name library and learn its functionality](https://pypi.org/project/names/)
-- [Educative - Used for help to get the audio to work](https://www.educative.io/answers/how-to-play-an-audio-file-in-pygame)
 - [W3 Schools - Used for various explanations such as understanding global vs local variables](https://www.w3schools.com/python/python_scope.asp)
-- [YtMp3 - Used to download copyright free music off Youtube](https://ytmp3.cc/a172/)
 
 ### Source Control Repository
 
@@ -27,11 +24,21 @@ Malice in Chains (MiC) is a text based choose your own adventure game set in a c
 
 ### APP Features
 
+Feature 1 - Story Function (Text input by user & print output of story)
+
 - The bulk of the game will have an input text feature to make choices which continues the story in the form of print output. Depending on choices made by the user determines which path the story follows. I have done this by utilising different functions for different arcs of the story. Certain choices call upon different functions, some loop back into each other, other functions completely diverge off to a separate conclusion. Most of these functions utilised while loops with if user_input this, elif user_input that, to drive the story, and else to catch the errors if text other than what was expected was entered by the user.
+
+Feature 2 - Random Encounter (Random NPC & number minigame)
 
 - I added a compulsory encounter (random_encounter() within encounter.py) near the start of the game that creates a random Non Playable Character (NPC) with random attributes who plays a simple minigame of guess the number based on a randomly generated number. This adds to the replayability of the game by ensuring every playthrough is different. For this minigame I used a try block to test for value errors which could be caught with an exception if any non integers inputed. I was able to implement this in a way that the game would still continue in the event of a value error without disruption.
 
+Feature 3 - Condition Variables (Player Condition & Obtainable Items)
+
 - I added various 'condition' variables such as wounded and ammo which represent the player's condition or obtainable items which had the potential to be picked up by the player depending on certain choices. These are all bool values which would potentially force the story in a certain direction dependent on whether they were True or False at a particular time. Some of these were simple flavour text not providing too extreme a diversion, where some would be the difference between winning or losing the game in certain story arcs. This made the choices in the game more significant for the player.
+
+Feature 4 - Rock, Paper, Scissors (Optional Minigame)
+
+- I created an optional minigame of rock, paper, scissors that can be played with Nikki if she is alive at that point in the story. It can also be skipped by the player if they choose to. The feature randomises Nikki's choice and accepts players choice in the form of input. It then works out who won or a tie based on an if/elif/else statement. It will track the wins for Nikki and player, and when the player quits playing there is different dialogue depending on who was the overall winner or if there was a tie. The game will allow the player to play as many games in a row as they want or finish after any game.
 
 ### Implementation Plan
 

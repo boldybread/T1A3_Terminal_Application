@@ -28,11 +28,14 @@ def charge():
     print("You summon all your remaining strength, get up and start charging the bar")
     sleep(wait_duration)
     global wounded
+    global injured
     from chapt_2a import wounded
     from chapt_3a import injured
     if wounded or injured:
         print("Killjoy is taken by surprise with your brash move but quickly overpowers you in your weakened condition. He throws you down and aims his gun at you.")
         sleep(wait_duration)
+        from chapt_1b import fname
+        print(f"'Nice try {fname}, see ya around!'")
         you_died()
     else:
         print("Killjoy is taken by surprise with your brash move, you both wrestle on the ground of the bar.")
@@ -119,14 +122,24 @@ def no_bar():
             else:
                 print("'How did you manage to get out by the way? Was it Nikki?'")
                 sleep(wait_duration)
-                print("Nikki, that was her name!")
-                sleep(wait_duration)
-                print("'and where is nik...'")
-                sleep(wait_duration)
-                print("You seize your chance and spring up from cover and fire one round. It hits Killjoy cleanly.")
-                sleep(wait_duration)
-                print("'She is dead, just like you are.'")
-                from outro import outro_1
-                outro_1()
+                last_chance = ""
+                lc_options = ["wait", "charge"]
+                while last_chance not in lc_options:
+                    print("'wait' | 'charge'")
+                    last_chance = input().lower()
+                    if last_chance == "wait":
+                        print("Nikki, that was her name!")
+                        sleep(wait_duration)
+                        print("'and where is nik...'")
+                        sleep(wait_duration)
+                        print("You seize your chance and spring up from cover and fire one round. It hits Killjoy cleanly.")
+                        sleep(wait_duration)
+                        print("'She is dead, just like you are.'")
+                        from outro import outro_1
+                        outro_1()
+                    elif last_chance == "charge":
+                        charge()
+                    else:
+                        print("Choose quickly!!")
         else:
             print("I need to make a choice quickly!")

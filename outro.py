@@ -13,8 +13,8 @@ def outro_1():
     print(f"Well done {fname} you completed the game in {sw}. Why don't you see if you can improve on that time next time!{Style.reset}")
     print("'exit' | 'start over'")
     if input().lower() == "start over":
-        from main import story_intro
-        story_intro()
+        from intro import prologue
+        prologue()
     else:
         exit()
 
@@ -26,7 +26,7 @@ def outro_2():
     print(f"Well done {fname} you completed the game in {sw}. Why don't you see if you can improve on that time next time!{Style.reset}")
     print("'exit' | 'start over'")
     if input().lower() == "start over":
-        from main import story_intro
-        story_intro()
+        from intro import prologue
+        prologue()
     else:
         exit()
