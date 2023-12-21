@@ -73,7 +73,6 @@ def number_guess_game():
             except ValueError:
                 print("ValueError - Input needs to be a number!!")
                 continue
-
         else:
             print(f"Ah you were so close but you've run out of guesses! My number was {random_number}")
             sleep(wait_duration)
