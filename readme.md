@@ -30,7 +30,7 @@ Feature 1 - Story Function (Text input by user & print output of story)
 
 Feature 2 - Random Encounter (Random NPC & number minigame)
 
-- I added a compulsory encounter (random_encounter() within encounter.py) near the start of the game that creates a random Non Playable Character (NPC) with random attributes who plays a simple minigame of guess the number based on a randomly generated number. This adds to the replayability of the game by ensuring every playthrough is different. For this minigame I used a try block to test for value errors which could be caught with an exception if any non integers inputed. I was able to implement this in a way that the game would still continue in the event of a value error without disruption.
+- I added a compulsory encounter (random_encounter() within encounter.py) near the start of the game that creates a random Non Playable Character (NPC) with random attributes who plays a simple minigame of guess the number based on a randomly generated number. This adds to the replayability of the game by ensuring every playthrough is different. For this minigame I used a try block to test for value errors which could be caught with an exception if any non integers inputted. I was able to implement this in a way that the game would still continue in the event of a value error without disruption.
 
 Feature 3 - Condition Variables (Player Condition & Obtainable Items)
 
@@ -70,7 +70,7 @@ The random encounter was created as a compulsory minigame introducing a bunch of
 
 Rock, Paper, Scissors was my second minigame I created that was optional again offering a break from the standard game process allowing the player to do something a bt different.
 
-![Creating Rock, Peper, Scissors minigame](images\Create_RPS.jpg)
+![Creating Rock, Paper, Scissors minigame](images\Create_RPS.jpg)
 
 I created multiple bash scripts designed to setup the venv, check for python 3, install all required packages and then run the game. This is explained in more detail below in the Help Documentation.
 
@@ -94,11 +94,11 @@ Malice in Chains (MiC) needs to be run on Python 3 and requires multiple externa
 
 #### setup.sh
 
-setup.sh must be run first. Run this script using the command ```./setup.sh```. This will first check for Python 3 on user's device. It will then run venv_create to create a virtual enviroment if it doesnt exist and then activate it. It will then run packages.sh which installs all required packages required to run MiC based off the requirements.txt file within the activated virtual environment. After this, setup is complete and run.sh can be run to launch the game.
+setup.sh must be run first. Run this script using the command ```./setup.sh```. This will first check for Python 3 on user's device. It will then run venv_create to create a virtual environment if it doesn't exist and then activate it. It will then run packages.sh which installs all required packages required to run MiC based off the requirements.txt file within the activated virtual environment. After this, setup is complete and run.sh can be run to launch the game.
 
 #### venv_create.sh
 
-venv_create.sh creates a virtual enviroment if it doesnt exist and then activates it. This script is automatically run from setup.sh and does not require to be run by the user. The venv will deactivate after the game closes, but be reopened again when run.sh is executed. The venv can be manually run from the command line with ```source .venv/activate/bin``` which can help in case of troubleshooting. The venv can then be deactivated with typing deactivate.
+venv_create.sh creates a virtual environment if it doesn't exist and then activates it. This script is automatically run from setup.sh and does not require to be run by the user. The venv will deactivate after the game closes, but be reopened again when run.sh is executed. The venv can be manually run from the command line with ```source .venv/activate/bin``` which can help in case of troubleshooting. The venv can then be deactivated with typing deactivate.
 
 #### packages.sh
 
@@ -110,7 +110,7 @@ using the command ```./run.sh``` will run the main.py file which will start MiC.
 
 #### Troubleshooting
 
-- Within the game the player will be required to enter text to make a story choice. The text that can be chosen as an action will usually be displayed in red. All the story text will be outputed to the screen, when the game is waiting on a choice from the player it will display at least one of the available options to the player for them to type. If a player enters any text other than a valid choice the game will prompt you to enter a valid choice and will not allow you to continue until the player does so.
+- Within the game the player will be required to enter text to make a story choice. The text that can be chosen as an action will usually be displayed in red. All the story text will be outputted to the screen, when the game is waiting on a choice from the player it will display at least one of the available options to the player for them to type. If a player enters any text other than a valid choice the game will prompt you to enter a valid choice and will not allow you to continue until the player does so.
 
 - If you need to quit the game at anytime you can do so with CTRL Z to exit the APP. To start the game again utilise ```./run.sh```
 
