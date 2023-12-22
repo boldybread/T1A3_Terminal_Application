@@ -5,7 +5,7 @@ from time import sleep
 def prologue():
     from main import wait_duration
     print(f"{Fore.black}{Back.white}Welcome to Malice in Chains a text based adventure. You control the journey by inputing your choices. \nLook out for any red text as this is an optional {Fore.red}'action'{Fore.black} that can be chosen by typing in that input. \nSometimes you won't be prompted to input that action so keep an eye out for red text. \nRemember that choices can have consequences. Good luck!{Style.reset}\n")
-    sleep(10)
+    # sleep(10)
     user_input = ""
     options = ["open"]
     while user_input not in options:
