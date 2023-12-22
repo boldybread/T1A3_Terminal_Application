@@ -18,6 +18,10 @@ Malice in Chains (MiC) is a text based choose your own adventure game set in a c
 
 - [Terminal Application on Github](https://github.com/boldybread/T1A3_Terminal_Application)
 
+### Youtube Presentation Link
+
+- [Youtube Presentation](https://youtu.be/v50VDBzhk8U)
+
 ### Code Styling Guide
 
 - [PEP8](https://peps.python.org/pep-0008/)
